@@ -16,7 +16,7 @@ simple Library to have Progresses dots loading
 	}
 	Current Ver:"1.0.0"
 
-# Done
+Done !!!
 
 # NOTE:
 To change width and height:
@@ -28,4 +28,20 @@ android:background="@color/exampleColor"
 
 <img src="screenshots/Screenshot_1603010713.png" width="300">
 <img src="screenshots/Screenshot_1603010714.png" width="300">
+
+
+        <com.razzaghimahdi78.dotsloading.LoadingDotsGetWave
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:background="@color/colorPrimary" />
+
+        <com.razzaghimahdi78.dotsloading.LoadingDotsGetFade
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:background="@color/colorPrimary" />
+
+        <com.razzaghimahdi78.dotsloading.LoadingDotsGetBigger
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:background="@color/colorPrimary" />
 
