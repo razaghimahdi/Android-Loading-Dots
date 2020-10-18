@@ -18,14 +18,6 @@ import android.widget.LinearLayout;
 
 import androidx.annotation.Nullable;
 
-/** NOTE:
- * Use this view with width = height or width > height
- * EXAMPLE :
- * android:layout_width="50dp"
- * android:layout_height="30dp"
- * To change dot color you can use :
- * android:background="@color/exampleColor"
- */
 
 public class LoadingDotsGetFade extends LinearLayout {
 
