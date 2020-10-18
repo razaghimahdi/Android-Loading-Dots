@@ -1,2 +1,3 @@
+include ':DotsLoading'
 include ':app'
 rootProject.name = "DotsLoadingProject"
