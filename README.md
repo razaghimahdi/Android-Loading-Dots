@@ -2,6 +2,8 @@
 simple Library to have Progresses dots loading
 ## Developed by Mahdi Razzaghi Ghaleh
 
+https://jitpack.io/#razaghimahdi/Android-Loading-Dots
+
 # Step1. Add it in your root build.gradle at the end of repositories:
 	allprojects {
 		repositories {
