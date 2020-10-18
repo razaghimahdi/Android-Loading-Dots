@@ -14,6 +14,7 @@ simple Library to have Progresses dots loading
 	dependencies {
 	        implementation 'com.github.razaghimahdi:Android-Loading-Dots:Tag'
 	}
+	Current Ver:"1.0.0"
 
 # Done
 
