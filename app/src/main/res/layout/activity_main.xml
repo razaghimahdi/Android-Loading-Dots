@@ -16,17 +16,23 @@
         <com.razzaghimahdi78.dotsloading.LoadingDotsGetWave
             android:layout_width="65dp"
             android:layout_height="65dp"
-            android:background="@color/colorPrimary" />
+            app:wave_dots_color="@color/colorPrimaryDark"
+            app:wave_dots_count="3"
+            app:wave_dots_duration="500" />
 
         <com.razzaghimahdi78.dotsloading.LoadingDotsGetFade
             android:layout_width="65dp"
             android:layout_height="65dp"
-            android:background="@color/colorPrimary" />
+            app:fade_dots_color="@color/colorPrimaryDark"
+            app:fade_dots_count="3"
+            app:fade_dots_duration="500" />
 
         <com.razzaghimahdi78.dotsloading.LoadingDotsGetBigger
             android:layout_width="65dp"
             android:layout_height="65dp"
-            android:background="@color/colorPrimary" />
+            app:bigger_dots_color="@color/colorPrimaryDark"
+            app:bigger_dots_count="3"
+            app:bigger_dots_duration="500"/>
 
 
     </LinearLayout>
