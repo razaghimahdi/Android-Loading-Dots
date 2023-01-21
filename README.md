@@ -2,8 +2,6 @@
 simple Library to have Progresses dots loading
 ## Developed by Mahdi Razzaghi Ghaleh
 
-https://jitpack.io/#razaghimahdi/Android-Loading-Dots
-
 # Step1. Add it in your root build.gradle at the end of repositories:
 	allprojects {
 		repositories {
@@ -14,36 +12,35 @@ https://jitpack.io/#razaghimahdi/Android-Loading-Dots
 
 # Step 2. Add the dependency
 	dependencies {
-	        implementation 'com.github.razaghimahdi:Android-Loading-Dots:Tag'
+	        implementation 'com.github.razaghimahdi:Android-Loading-Dots:1.2.0'
 	}
-	Current Ver:"1.0.0"
 
-Done !!!
-
-# NOTE:
-To change width and height:
-android:layout_width="50dp"
-android:layout_height="30dp"
-To change dot color:
-android:background="@color/exampleColor"
-
-
-<img src="screenshots/Screenshot_1603010713.png" width="300">
-<img src="screenshots/Screenshot_1603010714.png" width="300">
-
+# Step 3. How to use
+```xml
 
         <com.razzaghimahdi78.dotsloading.LoadingDotsGetWave
             android:layout_width="65dp"
             android:layout_height="65dp"
-            android:background="@color/colorPrimary" />
+            app:wave_dots_color="@color/colorPrimaryDark"
+            app:wave_dots_count="3"
+            app:wave_dots_duration="500" />
 
         <com.razzaghimahdi78.dotsloading.LoadingDotsGetFade
             android:layout_width="65dp"
             android:layout_height="65dp"
-            android:background="@color/colorPrimary" />
+            app:fade_dots_color="@color/colorPrimaryDark"
+            app:fade_dots_count="3"
+            app:fade_dots_duration="500" />
 
         <com.razzaghimahdi78.dotsloading.LoadingDotsGetBigger
             android:layout_width="65dp"
             android:layout_height="65dp"
-            android:background="@color/colorPrimary" />
+            app:bigger_dots_color="@color/colorPrimaryDark"
+            app:bigger_dots_count="3"
+            app:bigger_dots_duration="500"/>
+```
+
+Done !!!
+
+
 
