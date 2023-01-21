@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="LoadingDotsGetBigger">
+        <attr name="bigger_dots_color" format="color" />
+        <attr name="bigger_dots_count" format="integer" />
+        <attr name="bigger_dots_duration" format="integer" />
+    </declare-styleable>
+
+
+    <declare-styleable name="LoadingDotsGetWave">
+        <attr name="wave_dots_color" format="color" />
+        <attr name="wave_dots_count" format="integer" />
+        <attr name="wave_dots_duration" format="integer" />
+    </declare-styleable>
+
+
+    <declare-styleable name="LoadingDotsGetFade">
+        <attr name="fade_dots_color" format="color" />
+        <attr name="fade_dots_count" format="integer" />
+        <attr name="fade_dots_duration" format="integer" />
+    </declare-styleable>
+
+
+</resources>
