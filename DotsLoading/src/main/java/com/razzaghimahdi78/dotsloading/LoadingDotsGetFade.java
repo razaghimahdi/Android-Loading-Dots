@@ -6,6 +6,7 @@ import android.animation.ObjectAnimator;
 import android.animation.PropertyValuesHolder;
 import android.animation.ValueAnimator;
 import android.content.Context;
+import android.content.res.TypedArray;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
@@ -21,52 +22,85 @@ import androidx.annotation.Nullable;
 
 public class LoadingDotsGetFade extends LinearLayout {
 
-    private Context context;
     private ImageView[] img;
     private GradientDrawable circle = new GradientDrawable();
-    private static final int OBJECT_SIZE = 3;
-    private static final int DURATION = 400;
+
+    private int DOTS_COUNT = 3;
+    private int DURATION = 300;
+    private int COLOR = Color.parseColor("#FF3700B3");
+
     private ObjectAnimator animator[];
+    boolean onLayoutReach = false;
 
     public LoadingDotsGetFade(Context context) {
         super(context);
+        initView(context, null);
     }
 
     public LoadingDotsGetFade(Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
-        this.context = context;
+
+
+        initView(context, attrs);
+    }
+
+    public LoadingDotsGetFade(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
+        super(context, attrs, defStyleAttr);
+        initView(context, attrs);
+    }
+
+
+    @Override
+    protected void onLayout(boolean changed, int l, int t, int r, int b) {
+        super.onLayout(changed, l, t, r, b);
+        if (!onLayoutReach) {
+            onLayoutReach = true;
+            LayoutParams lp = new LayoutParams(getWidth() / 5, getWidth() / 5);
+            for (int i = 0; i < DOTS_COUNT; i++) {
+                img[i].setLayoutParams(lp);
+            }
+            animateView(true);
+        }
+    }
+
+    @Override
+    protected void onDetachedFromWindow() {
+        super.onDetachedFromWindow();
+        for (int i = 0; i < DOTS_COUNT; i++) {
+            if (animator[i].isRunning()) {
+                animator[i].removeAllListeners();
+                animator[i].end();
+                animator[i].cancel();
+            }
+        }
+    }
+
+    private void initView(Context context, @Nullable AttributeSet attrs) {
+
+        TypedArray typedArray = context.obtainStyledAttributes(attrs, R.styleable.LoadingDotsGetFade);
+        setColor(typedArray.getColor(R.styleable.LoadingDotsGetFade_fade_dots_color, Color.parseColor("#FF3700B3")));
+        setDuration(typedArray.getInt(R.styleable.LoadingDotsGetFade_fade_dots_duration, 300));
+        setDotsCount(typedArray.getInt(R.styleable.LoadingDotsGetFade_fade_dots_count, 3));
 
         setOrientation(LinearLayout.HORIZONTAL);
         setGravity(Gravity.CENTER);
         LayoutParams layoutParams = new LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);
         setLayoutParams(layoutParams);
 
-        initView();
-    }
 
-    public LoadingDotsGetFade(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
-        super(context, attrs, defStyleAttr);
-    }
-
-    private void initView() {
-        int color = Color.GRAY;
-        Drawable background = getBackground();
-        if (background instanceof ColorDrawable) {
-            color = ((ColorDrawable) background).getColor();
-        }
         setBackgroundColor(Color.TRANSPARENT);
 
         removeAllViews();
-        img = new ImageView[OBJECT_SIZE];
+        img = new ImageView[DOTS_COUNT];
         circle.setShape(GradientDrawable.OVAL);
-        circle.setColor(color);
+        circle.setColor(COLOR);
         circle.setSize(200, 200);
 
         LayoutParams layoutParams2 = new LayoutParams(0, ViewGroup.LayoutParams.MATCH_PARENT);
         layoutParams2.weight = 1;
 
-        LinearLayout[] rel = new LinearLayout[OBJECT_SIZE];
-        for (int i = 0; i < OBJECT_SIZE; i++) {
+        LinearLayout[] rel = new LinearLayout[DOTS_COUNT];
+        for (int i = 0; i < DOTS_COUNT; i++) {
             rel[i] = new LinearLayout(context);
             rel[i].setGravity(Gravity.CENTER);
             rel[i].setLayoutParams(layoutParams2);
@@ -77,36 +111,9 @@ public class LoadingDotsGetFade extends LinearLayout {
         }
     }
 
-    boolean onLayoutReach = false;
-
-    @Override
-    protected void onLayout(boolean changed, int l, int t, int r, int b) {
-        super.onLayout(changed, l, t, r, b);
-        if (!onLayoutReach) {
-            onLayoutReach = true;
-            LayoutParams lp = new LayoutParams(getWidth() / 5, getWidth() / 5);
-            for (int i = 0; i < OBJECT_SIZE; i++) {
-                img[i].setLayoutParams(lp);
-            }
-            animateView(true);
-        }
-    }
-
-    @Override
-    protected void onDetachedFromWindow() {
-        super.onDetachedFromWindow();
-        for (int i = 0; i < OBJECT_SIZE; i++) {
-            if (animator[i].isRunning()) {
-                animator[i].removeAllListeners();
-                animator[i].end();
-                animator[i].cancel();
-            }
-        }
-    }
-
     private void animateView(final boolean show) {
-        animator = new ObjectAnimator[OBJECT_SIZE];
-        for (int i = 0; i < OBJECT_SIZE; i++) {
+        animator = new ObjectAnimator[DOTS_COUNT];
+        for (int i = 0; i < DOTS_COUNT; i++) {
             PropertyValuesHolder A = PropertyValuesHolder.ofFloat("alpha", 0.2f);
             PropertyValuesHolder B = PropertyValuesHolder.ofFloat("alpha", 1.0f);
             PropertyValuesHolder alpha = show ? A : B;
@@ -117,7 +124,7 @@ public class LoadingDotsGetFade extends LinearLayout {
             animator[i].setStartDelay(DURATION * i);
             animator[i].start();
         }
-        animator[OBJECT_SIZE - 1].addListener(new AnimatorListenerAdapter() {
+        animator[DOTS_COUNT - 1].addListener(new AnimatorListenerAdapter() {
             @Override
             public void onAnimationEnd(Animator animation) {
                 super.onAnimationEnd(animation);
@@ -127,5 +134,18 @@ public class LoadingDotsGetFade extends LinearLayout {
 
     }
 
+
+
+    public void setDotsCount(int value) {
+        this.DOTS_COUNT = value;
+    }
+
+    public void setDuration(int value) {
+        this.DURATION = value;
+    }
+
+    public void setColor(int value) {
+        this.COLOR = value;
+    }
 
 }
