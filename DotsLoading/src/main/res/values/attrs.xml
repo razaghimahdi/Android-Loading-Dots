@@ -1,25 +1,77 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <declare-styleable name="LoadingDotsGetBigger">
-        <attr name="bigger_dots_color" format="color" />
-        <attr name="bigger_dots_count" format="integer" />
-        <attr name="bigger_dots_duration" format="integer" />
+
+
+    <declare-styleable name="LoadingCircleRotation">
+        <attr name="dots_color" />
+        <attr name="dots_duration" />
+        <attr name="dots_size" />
+    </declare-styleable>
+
+    <declare-styleable name="LoadingCircleFady">
+        <attr name="dots_color" />
+        <attr name="dots_duration" />
+        <attr name="dots_size" />
     </declare-styleable>
 
 
-    <declare-styleable name="LoadingDotsGetWave">
-        <attr name="wave_dots_color" format="color" />
-        <attr name="wave_dots_count" format="integer" />
-        <attr name="wave_dots_duration" format="integer" />
+    <declare-styleable name="LoadingScaly">
+        <attr name="dots_color" />
+        <attr name="dots_count" />
+        <attr name="dots_duration" />
+        <attr name="dots_size" />
+    </declare-styleable>
+
+    <declare-styleable name="LoadingBiggy">
+        <attr name="dots_color" />
+        <attr name="dots_count" />
+        <attr name="dots_duration" />
+        <attr name="dots_size" />
+    </declare-styleable>
+
+    <declare-styleable name="LoadingDancing">
+        <attr name="dots_color" />
+        <attr name="dots_count" />
+        <attr name="dots_duration" />
+        <attr name="dots_size" />
+    </declare-styleable>
+
+    <declare-styleable name="LoadingWavy">
+        <attr name="dots_color" />
+        <attr name="dots_count" />
+        <attr name="dots_duration" />
+        <attr name="dots_size" />
     </declare-styleable>
 
 
-    <declare-styleable name="LoadingDotsGetFade">
-        <attr name="fade_dots_color" format="color" />
-        <attr name="fade_dots_count" format="integer" />
-        <attr name="fade_dots_duration" format="integer" />
+    <declare-styleable name="LoadingFady">
+        <attr name="dots_color" />
+        <attr name="dots_count" />
+        <attr name="dots_duration" />
+        <attr name="dots_size" />
     </declare-styleable>
 
+    <attr name="dots_color" format="color" />
+
+    <attr name="dots_count" format="integer" />
+
+    <attr name="dots_duration" format="integer" />
+
+
+    <attr name="dots_size" format="enum">
+        <enum name="tiny" value="0" />
+        <enum name="small" value="1" />
+        <enum name="medium" value="2" />
+        <enum name="big" value="3" />
+        <enum name="huge" value="4" />
+    </attr>
+
+    <declare-styleable name="CircleView">
+        <attr name="circleRadius" format="dimension" />
+        <attr name="circleColor" format="color" />
+        <attr name="circleDrawOnlystroke" format="boolean" />
+        <attr name="circleStrokeWidth" format="dimension" />
+    </declare-styleable>
 
 </resources>
