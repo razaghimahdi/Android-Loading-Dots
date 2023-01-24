@@ -2,7 +2,7 @@
 
 A library which allows you to have some beautiful loading with dots, 
 for both Java and Kotlin in XML, 
-If you need **Jetpack Compose** version of this library then click [here](https://github.com/razaghimahdi/Android-Loading-Dots)
+If you need **Jetpack Compose** version of this library then click [here](https://github.com/razaghimahdi/Compose-Loading-Dots)
 
 ## Developed by Mahdi Razzaghi Ghaleh
 
