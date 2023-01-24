@@ -1,12 +1,13 @@
 # Android-Loading-Dots
 
-simple Library to have Progresses dots loading
+A library which allows you to have some beautiful loading with dots, 
+for both Java and Kotlin in XML, If you need compose version of this library then click [here](https://github.com/razaghimahdi/Android-Loading-Dots)
 
 ## Developed by Mahdi Razzaghi Ghaleh
 
 [![](https://jitpack.io/v/razaghimahdi/Android-Loading-Dots.svg)](https://jitpack.io/#razaghimahdi/Android-Loading-Dots)
 
-# Step1. Add it in your root build.gradle at the end of repositories:
+## Step 1. Add it in your root build.gradle at the end of repositories:
 
 	allprojects {
 		repositories {
@@ -15,25 +16,25 @@ simple Library to have Progresses dots loading
 		}
 	}
 
-# Step 2. Add the dependency
+## Step 2. Add the dependency
 
 	dependencies {
 	        implementation 'com.github.razaghimahdi:Android-Loading-Dots:1.3.0'
 	}
 
-# Step 3. How to use
+## Step 3. How to use
 
 XML:
 
 ```xml
             <com.razzaghimahdi78.dotsloading.linear.LoadingWavy
-                android:id="@+id/loadingWavy"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:dots_color="@color/colorPrimaryDark"
-                app:dots_count="3"
-                app:dots_duration="500"
-                app:dots_size="medium" />
+            android:id="@+id/loadingWavy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:dots_color="@color/colorPrimaryDark"
+            app:dots_count="3"
+            app:dots_duration="500"
+            app:dots_size="medium" />
             
             <com.razzaghimahdi78.dotsloading.linear.LoadingFady
             android:layout_width="wrap_content"
@@ -84,7 +85,7 @@ XML:
             app:dots_size="medium" />
 ```
 
-# Step 5. How to initial
+## Step 4. How to initial
 
 ```Java
         LoadingWavy LoadingWavy=findViewById(R.id.loadingWavy);
@@ -105,7 +106,7 @@ XML:
 
 Done !!!
 
-#### **Note**
+### **Note**
 
 There are 5 type of sizes:
 

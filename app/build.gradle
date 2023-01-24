@@ -30,7 +30,7 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
 
-    // implementation 'com.github.razaghimahdi:Android-Loading-Dots:1.2.0'
+    implementation 'com.github.razaghimahdi:Android-Loading-Dots:1.3.0'
 
-   implementation project(path: ':DotsLoading')
+    // implementation project(path: ':DotsLoading')
 }
