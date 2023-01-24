@@ -7,32 +7,70 @@
     tools:context=".MainActivity">
 
     <LinearLayout
-        android:gravity="center"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerVertical="true"
+        android:gravity="center"
         android:orientation="vertical">
 
-        <com.razzaghimahdi78.dotsloading.LoadingDotsGetWave
-            android:layout_width="65dp"
-            android:layout_height="65dp"
-            app:wave_dots_color="@color/colorPrimaryDark"
-            app:wave_dots_count="3"
-            app:wave_dots_duration="500" />
 
-        <com.razzaghimahdi78.dotsloading.LoadingDotsGetFade
-            android:layout_width="65dp"
-            android:layout_height="65dp"
-            app:fade_dots_color="@color/colorPrimaryDark"
-            app:fade_dots_count="3"
-            app:fade_dots_duration="500" />
+        <com.razzaghimahdi78.dotsloading.linear.LoadingWavy
+            android:id="@+id/loadingWavy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:dots_color="@color/colorPrimaryDark"
+            app:dots_count="3"
+            app:dots_duration="500"
+            app:dots_size="medium" />
 
-        <com.razzaghimahdi78.dotsloading.LoadingDotsGetBigger
-            android:layout_width="65dp"
-            android:layout_height="65dp"
-            app:bigger_dots_color="@color/colorPrimaryDark"
-            app:bigger_dots_count="3"
-            app:bigger_dots_duration="500"/>
+
+        <com.razzaghimahdi78.dotsloading.linear.LoadingFady
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:dots_color="@color/colorPrimaryDark"
+            app:dots_count="3"
+            app:dots_duration="500"
+            app:dots_size="medium" />
+
+        <com.razzaghimahdi78.dotsloading.linear.LoadingBiggy
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:dots_color="@color/colorPrimaryDark"
+            app:dots_count="3"
+            app:dots_duration="500"
+            app:dots_size="medium" />
+
+
+        <com.razzaghimahdi78.dotsloading.linear.LoadingScaly
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:dots_color="@color/colorPrimaryDark"
+            app:dots_count="5"
+            app:dots_duration="400"
+            app:dots_size="medium" />
+
+        <com.razzaghimahdi78.dotsloading.linear.LoadingDancing
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:dots_color="@color/colorPrimaryDark"
+            app:dots_count="3"
+            app:dots_duration="800"
+            app:dots_size="medium" />
+
+
+        <com.razzaghimahdi78.dotsloading.circle.LoadingCircleFady
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:dots_color="@color/colorPrimaryDark"
+            app:dots_duration="800"
+            app:dots_size="medium" />
+
+        <com.razzaghimahdi78.dotsloading.circle.LoadingCircleRotation
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:dots_color="@color/colorPrimaryDark"
+            app:dots_duration="800"
+            app:dots_size="medium" />
 
 
     </LinearLayout>
