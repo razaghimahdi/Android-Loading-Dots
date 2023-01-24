@@ -1,11 +1,13 @@
 # Android-Loading-Dots
+
 simple Library to have Progresses dots loading
+
 ## Developed by Mahdi Razzaghi Ghaleh
 
 [![](https://jitpack.io/v/razaghimahdi/Android-Loading-Dots.svg)](https://jitpack.io/#razaghimahdi/Android-Loading-Dots)
 
-
 # Step1. Add it in your root build.gradle at the end of repositories:
+
 	allprojects {
 		repositories {
 			...
@@ -14,37 +16,108 @@ simple Library to have Progresses dots loading
 	}
 
 # Step 2. Add the dependency
+
 	dependencies {
-	        implementation 'com.github.razaghimahdi:Android-Loading-Dots:1.2.0'
+	        implementation 'com.github.razaghimahdi:Android-Loading-Dots:1.3.0'
 	}
 
 # Step 3. How to use
+
+XML:
+
 ```xml
+            <com.razzaghimahdi78.dotsloading.linear.LoadingWavy
+                android:id="@+id/loadingWavy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:dots_color="@color/colorPrimaryDark"
+                app:dots_count="3"
+                app:dots_duration="500"
+                app:dots_size="medium" />
+            
+            <com.razzaghimahdi78.dotsloading.linear.LoadingFady
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:dots_color="@color/colorPrimaryDark"
+            app:dots_count="3"
+            app:dots_duration="500"
+            app:dots_size="medium" />
+            
+            <com.razzaghimahdi78.dotsloading.linear.LoadingBiggy
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:dots_color="@color/colorPrimaryDark"
+            app:dots_count="3"
+            app:dots_duration="500"
+            app:dots_size="medium" />
+            
+            
+            <com.razzaghimahdi78.dotsloading.linear.LoadingScaly
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:dots_color="@color/colorPrimaryDark"
+            app:dots_count="5"
+            app:dots_duration="400"
+            app:dots_size="medium" />
+            
+            <com.razzaghimahdi78.dotsloading.linear.LoadingDancing
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:dots_color="@color/colorPrimaryDark"
+            app:dots_count="3"
+            app:dots_duration="800"
+            app:dots_size="medium" />
+            
+            
+            <com.razzaghimahdi78.dotsloading.circle.LoadingCircleFady
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:dots_color="@color/colorPrimaryDark"
+            app:dots_duration="800"
+            app:dots_size="medium" />
+            
+            <com.razzaghimahdi78.dotsloading.circle.LoadingCircleRotation
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:dots_color="@color/colorPrimaryDark"
+            app:dots_duration="800"
+            app:dots_size="medium" />
+```
 
-        <com.razzaghimahdi78.dotsloading.LoadingDotsGetWave
-            android:layout_width="65dp"
-            android:layout_height="65dp"
-            app:wave_dots_color="@color/colorPrimaryDark"
-            app:wave_dots_count="3"
-            app:wave_dots_duration="500" />
+# Step 5. How to initial
 
-        <com.razzaghimahdi78.dotsloading.LoadingDotsGetFade
-            android:layout_width="65dp"
-            android:layout_height="65dp"
-            app:fade_dots_color="@color/colorPrimaryDark"
-            app:fade_dots_count="3"
-            app:fade_dots_duration="500" />
+```Java
+        LoadingWavy LoadingWavy=findViewById(R.id.loadingWavy);
+        LoadingWavy.setSize(DotSize.MEDIUM);
+        LoadingWavy.setDotsCount(3);
+        LoadingWavy.setDuration(400);
+        LoadingWavy.setColor(Color.parseColor("#FF3700B3"));
 
-        <com.razzaghimahdi78.dotsloading.LoadingDotsGetBigger
-            android:layout_width="65dp"
-            android:layout_height="65dp"
-            app:bigger_dots_color="@color/colorPrimaryDark"
-            app:bigger_dots_count="3"
-            app:bigger_dots_duration="500"/>
+```
+
+```Kotlin
+        val LoadingWavy: LoadingWavy = findViewById(R.id.loadingWavy)
+        LoadingWavy.setSize(DotSize.MEDIUM)
+        LoadingWavy.setDotsCount(3)
+        LoadingWavy.setDuration(400)
+        LoadingWavy.setColor(Color.parseColor("#FF3700B3"))
 ```
 
 Done !!!
 
+#### **Note**
+
+There are 5 type of sizes:
+
+```Java
+public enum DotSize {
+    TINY,
+    SMALL,
+    MEDIUM,
+    BIG,
+    HUGE
+}
+```
 
 https://user-images.githubusercontent.com/61207818/213888322-69fdb878-56c5-496a-be8e-1760d8d16c97.mp4
 
