@@ -119,7 +119,8 @@ public enum DotSize {
 }
 ```
 
-https://user-images.githubusercontent.com/61207818/213888322-69fdb878-56c5-496a-be8e-1760d8d16c97.mp4
+
+https://user-images.githubusercontent.com/61207818/214298326-3f5d8aa2-38c5-4dab-ab5f-695639f5ff0f.mp4
 
 
 
