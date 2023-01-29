@@ -4,6 +4,7 @@ A library which allows you to have some beautiful loading with dots,  for both J
 
 > If you need **Jetpack Compose** version of this library then click [here](https://github.com/razaghimahdi/Compose-Loading-Dots).
 
+
 [![](https://jitpack.io/v/razaghimahdi/Android-Loading-Dots.svg)](https://jitpack.io/#razaghimahdi/Android-Loading-Dots)
 
 ## Step 1. Add it in your root build.gradle at the end of repositories:
