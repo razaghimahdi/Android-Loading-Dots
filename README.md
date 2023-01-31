@@ -7,7 +7,7 @@ A library which allows you to have some beautiful loading with dots,  for both J
 
 [![](https://jitpack.io/v/razaghimahdi/Android-Loading-Dots.svg)](https://jitpack.io/#razaghimahdi/Android-Loading-Dots)
 
-## Step 1. Add it in your project-level build.gradle or settings.gradle file:
+### Step 1. Add it in your project-level `build.gradle` or `ettings.gradle` file:
 
 	allprojects {
 		repositories {
@@ -16,13 +16,13 @@ A library which allows you to have some beautiful loading with dots,  for both J
 		}
 	}
 
-## Step 2. Add the dependency
+### Step 2. Add the dependency
 
 	dependencies {
 	        implementation 'com.github.razaghimahdi:Android-Loading-Dots:1.3.0'
 	}
 
-## Step 3. How to use
+### Step 3. How to use
 
 **XML:**
 
@@ -83,7 +83,7 @@ A library which allows you to have some beautiful loading with dots,  for both J
 	app:dots_size="medium" />
 ```
 
-## Step 4. How to initial
+### Step 4. How to initial
 
 ```java
 LoadingWavy LoadingWavy=findViewById(R.id.loadingWavy);
@@ -103,7 +103,7 @@ LoadingWavy.setDuration(400)
 LoadingWavy.setColor(Color.parseColor("#FF3700B3"))
 ```
 
-### **Note**
+#### **Note**
 
 There are 5 type of sizes:
 
