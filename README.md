@@ -7,7 +7,7 @@ A library which allows you to have some beautiful loading with dots,  for both J
 
 [![](https://jitpack.io/v/razaghimahdi/Android-Loading-Dots.svg)](https://jitpack.io/#razaghimahdi/Android-Loading-Dots)
 
-## Step 1. Add it in your project-level build.gradle or settings.gradle file, add JitPack repository:
+## Step 1. Add it in your project-level build.gradle or settings.gradle file:
 
 	allprojects {
 		repositories {
