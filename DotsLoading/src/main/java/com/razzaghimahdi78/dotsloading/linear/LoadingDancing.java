@@ -101,7 +101,8 @@ public class LoadingDancing extends BaseLinearLoading {
             setColor(typedArray.getColor(R.styleable.LoadingDancing_dots_color, DEFAULT_COLOR));
             setDuration(typedArray.getInt(R.styleable.LoadingDancing_dots_duration, DEFAULT_DURATION));
             setDotsCount(typedArray.getInt(R.styleable.LoadingDancing_dots_count, DEFAULT_DOTS_COUNT));
-            setSize(typedArray.getInt(R.styleable.LoadingDancing_dots_size, 2));
+            // setSize(typedArray.getInt(R.styleable.LoadingDancing_dots_size, 2));
+            setSize(typedArray.getDimensionPixelSize(R.styleable.LoadingDancing_dots_size, DEFAULT_DOTS_SIZE));
         }
         super.initView(context, attrs, DOTS_SIZE, DOTS_COUNT, COLOR);
     }
@@ -144,12 +145,13 @@ public class LoadingDancing extends BaseLinearLoading {
     }
 
 
-    private void setSize(int value) {
-        this.DOTS_SIZE = convertor.convertDotSize(value);
+
+    public void setSize(int value) {
+        this.DOTS_SIZE = value;
         initView(getContext(), null, DEFAULT_DOTS_SIZE, DEFAULT_DOTS_COUNT, DEFAULT_COLOR);
     }
 
-    public void setSize(DotSize value) {
+    private void setSize(DotSize value) {
         this.DOTS_SIZE = convertor.convertDotSize(value);
         initView(getContext(), null, DEFAULT_DOTS_SIZE, DEFAULT_DOTS_COUNT, DEFAULT_COLOR);
     }

@@ -102,7 +102,8 @@ public class LoadingCircleRotation extends BaseCircleLoading {
             TypedArray typedArray = context.obtainStyledAttributes(attrs, R.styleable.LoadingCircleRotation);
             setColor(typedArray.getColor(R.styleable.LoadingCircleRotation_dots_color, DEFAULT_COLOR));
             setDuration(typedArray.getInt(R.styleable.LoadingCircleRotation_dots_duration, DEFAULT_DURATION));
-            setSize(typedArray.getInt(R.styleable.LoadingCircleRotation_dots_size, 2));
+            // setSize(typedArray.getInt(R.styleable.LoadingCircleRotation_dots_size, 2));
+            setSize(typedArray.getDimensionPixelSize(R.styleable.LoadingCircleRotation_dots_size, DEFAULT_DOTS_SIZE));
         }
 
         super.initView(context, attrs, DOTS_SIZE, COLOR);
@@ -163,12 +164,12 @@ public class LoadingCircleRotation extends BaseCircleLoading {
         initView(getContext(), null, DEFAULT_DOTS_SIZE, DEFAULT_COLOR);
     }
 
-    private void setSize(int value) {
-        this.DOTS_SIZE = convertor.convertDotSize(value);
+    public void setSize(int value) {
+        this.DOTS_SIZE = value;
         initView(getContext(), null, DEFAULT_DOTS_SIZE, DEFAULT_COLOR);
     }
 
-    public void setSize(DotSize value) {
+    private void setSize(DotSize value) {
         this.DOTS_SIZE = convertor.convertDotSize(value);
         initView(getContext(), null, DEFAULT_DOTS_SIZE, DEFAULT_COLOR);
     }
