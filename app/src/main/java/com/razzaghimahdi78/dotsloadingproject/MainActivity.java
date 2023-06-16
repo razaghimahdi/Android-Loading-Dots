@@ -17,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         LoadingWavy LoadingWavy = findViewById(R.id.loadingWavy);
-        LoadingWavy.setSize(DotSize.MEDIUM);
+        LoadingWavy.setSize(30);
         LoadingWavy.setDotsCount(3);
         LoadingWavy.setDuration(400);
         LoadingWavy.setColor(Color.parseColor("#FF3700B3"));
