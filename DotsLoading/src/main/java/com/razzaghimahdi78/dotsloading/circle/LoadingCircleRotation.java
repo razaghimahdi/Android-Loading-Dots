@@ -75,17 +75,17 @@ public class LoadingCircleRotation extends BaseCircleLoading {
     @Override
     protected void onDetachedFromWindow() {
         super.onDetachedFromWindow();
-        if (rotateAnimator.isRunning()) {
+        if (rotateAnimator != null && rotateAnimator.isRunning()) {
             rotateAnimator.removeAllListeners();
             rotateAnimator.end();
             rotateAnimator.cancel();
         }
-        if (scaleAnimator.isRunning()) {
+        if (scaleAnimator != null && scaleAnimator.isRunning()) {
             scaleAnimator.removeAllListeners();
             scaleAnimator.end();
             scaleAnimator.cancel();
         }
-        if (alphaAnimator.isRunning()) {
+        if (alphaAnimator != null && alphaAnimator.isRunning()) {
             alphaAnimator.removeAllListeners();
             alphaAnimator.end();
             alphaAnimator.cancel();

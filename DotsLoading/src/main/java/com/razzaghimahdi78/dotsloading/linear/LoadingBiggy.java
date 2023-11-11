@@ -78,6 +78,7 @@ public class LoadingBiggy extends BaseLinearLoading {
     @Override
     protected void onDetachedFromWindow() {
         super.onDetachedFromWindow();
+        if (animator == null) return;
         for (int i = 0; i < DOTS_COUNT; i++) {
             if (animator[i].isRunning()) {
                 animator[i].removeAllListeners();

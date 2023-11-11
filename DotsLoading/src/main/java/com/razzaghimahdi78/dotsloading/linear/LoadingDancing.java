@@ -69,6 +69,7 @@ public class LoadingDancing extends BaseLinearLoading {
     protected void onDetachedFromWindow() {
         super.onDetachedFromWindow();
         for (int i = 0; i < DOTS_COUNT; i++) {
+            if (animator == null) return;
             if (animator[i].isRunning()) {
                 animator[i].removeAllListeners();
                 animator[i].end();
