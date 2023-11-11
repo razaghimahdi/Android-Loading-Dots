@@ -22,7 +22,7 @@ If you like or are using this project to learn or start your solution, please gi
 ### Step 2. Add the dependency
 
 	dependencies {
-	        implementation 'com.github.razaghimahdi:Android-Loading-Dots:1.3.1'
+	        implementation 'com.github.razaghimahdi:Android-Loading-Dots:1.3.2'
 	}
 
 ### Step 3. How to use
